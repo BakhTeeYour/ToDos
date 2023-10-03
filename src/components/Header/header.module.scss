@@ -1,0 +1,65 @@
+.header {
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+.header_wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 20px 0 20px;
+}
+.header_title {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  color: rgba(54, 136, 234, 1)
+}
+
+.header_navbar {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+  .header_rotate svg {
+    rotate: 180deg;
+  }
+  div {
+    display: inherit;
+    gap: 6px;
+    }
+  button {
+    background: #3688EA;
+    padding: 8px 30px;
+    border-radius: 6px;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+  }
+}
+
+.header_search {
+  position: relative;
+  div {
+    position: absolute;
+    top: 8px;
+    left: 5px;
+  }
+  input {
+    border-radius: 6px;
+    padding: 8px 30px;
+    border: 1px solid #9CABC2;
+    &:focus {
+      outline: none;
+      appearance: none;
+      border: 1px solid #3688EA;
+    }
+  }
+}
+
+.header_navbar_profile_block {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  img {
+    border-radius: 100%;
+  }
+}

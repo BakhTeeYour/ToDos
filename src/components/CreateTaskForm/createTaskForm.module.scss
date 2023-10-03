@@ -1,0 +1,53 @@
+.createTaskFrom {
+  position: relative;
+  z-index: 10;
+}
+
+.createTaskFrom__blur {
+  position: fixed;
+  inset: 0;
+  background: #6b7280;
+  opacity: 0.76;
+  backdrop-filter: blur(2px);
+}
+
+.createTaskFrom__wrapper {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  overflow-y: auto;
+}
+
+.createTaskFrom__block {
+  display: flex;
+  min-height: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem;
+  text-align: center;
+}
+
+.createTaskFrom__content {
+  position: relative;
+  overflow: hidden;
+  background: white;
+  text-align: left;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  border-radius: 8px;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.createTaskFrom__info {
+  background: white;
+  padding: 20px 16px 16px 16px;
+}

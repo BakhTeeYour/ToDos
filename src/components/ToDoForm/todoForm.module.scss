@@ -1,0 +1,20 @@
+.todoForm {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background: white;
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.todoForm_wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 10px;
+}
+
+.todoForm_title {
+  color: #9CABC2
+}

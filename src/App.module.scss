@@ -1,3 +1,76 @@
 .main_wrapper {
-  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.main_board_block {
+  margin: 20px 0 20px 0;
+  height: 32px;
+  .main_board_block_input {
+    border: 0;
+    outline: none;
+    margin-left: 15px;
+    margin-right: 15px;
+    font-size: 25px;
+    font-weight: 600;
+  }
+}
+
+.main_tasks_block {
+  margin: 15px;
+  display: flex;
+  gap: 20px
+}
+
+.main_task_block {
+  margin-top: 10px;
+  border-radius: 8px;
+  min-width: 272px;
+  padding: 0 10px 10px 10px;
+  background: #F3F4F8;
+}
+.main_task_block_add {
+  font-size: 18px;
+  cursor: pointer;
+  width: max-content;
+}
+
+.main_task_add_block {
+  background: #F3F4F8;
+  min-width: 272px;
+  border-radius: 8px;
+  margin-top: 10px;
+  padding: 5px;
+  border: 1px solid white;
+  p {
+    cursor: pointer;
+  }
+  input {
+    background: #F3F4F8;
+    border-radius: 8px;
+    max-width: 100%;
+    border: none;
+    outline: none;
+    padding: 15px;
+    margin-bottom: 5px;
+    font-size: 15px;
+    &:focus {
+      outline: 1px solid #3688EA;
+    }
+  }
+}
+
+.main_task_add_btn {
+  padding: 5px;
+  display: flex;
+  gap: 10px;
+  button {
+    border: 1px solid #3688EA;
+    background: inherit;
+    padding: 6px 30px;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+  }
 }
