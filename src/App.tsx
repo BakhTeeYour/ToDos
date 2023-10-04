@@ -3,38 +3,27 @@ import {MainLayout} from "./components/MainLayout";
 import mainStyle from './App.module.scss'
 import {TodoForm} from "./components/ToDoForm/todoForm";
 import {CreateTaskForm} from "./components/CreateTaskForm";
-
-const todo = [
-    {
-        id: 1,
-        name: 'Queue',
-        todos: []
-    },
-    {
-        id: 2,
-        name: 'Development',
-        todos: []
-    },
-    {
-        id: 3,
-        name: 'Done',
-        todos: []
-    }
-]
+import {useDispatch, useSelector} from "react-redux";
+import {IRootReducer} from "./store/reducer/interfaces";
+import {addTodos} from "./store/action/todos";
 
 function App() {
+    const {error, todos, loading} = useSelector((state: IRootReducer) => state.ToDosReducer);
+
     const [open, setOpen] = useState(false);
     const [boardName, setBoardName] = useState('My Board');
     const [addList, setAddList] = useState(false);
-    const [todos, setTodos] = useState(todo)
+
     const [todoName, setTodoName] = useState('');
     const [currentElId, setCurrElId] = useState(0);
+
+    const dispatch = useDispatch();
     const handleClick = (id: number) => {
         setCurrElId(id)
         setOpen(true)
     };
     const handleAddTodo = () => {
-        setTodos([...todos, {id: Date.now(), name: todoName, todos: []}]);
+        dispatch(addTodos([...todos, {id: Date.now(), name: todoName, todos: []}]))
         setTodoName('');
         setAddList(false);
     };
