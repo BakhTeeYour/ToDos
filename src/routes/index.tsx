@@ -1,12 +1,14 @@
 import {createBrowserRouter} from 'react-router-dom';
-import App from "../App";
+import {ToDos} from "../components/ToDos";
+import {Projects} from "../components/Projects";
 
 export const router = createBrowserRouter([
     {
         path: '/',
-        element: <App/>
+        element: <Projects/>
     },
     {
-
+        path: '/todos',
+        element: <ToDos/>
     }
 ])

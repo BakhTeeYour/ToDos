@@ -1,0 +1,41 @@
+.projects_wrapper {
+  margin: 20px;
+}
+
+.projects_header_block {
+  padding-bottom: 10px;
+}
+
+.projects_title_block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  button {
+    background: #3688EA;
+    padding: 10px 30px;
+    border-radius: 6px;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+  }
+}
+
+.projects_search {
+  position: relative;
+  div {
+    position: absolute;
+    top: 2px;
+    left: 5px;
+  }
+  input {
+    border-radius: 6px;
+    padding: 10px 30px;
+    border: 1px solid #9CABC2;
+    &:focus {
+      outline: none;
+      appearance: none;
+      border: 1px solid #3688EA;
+    }
+  }
+}

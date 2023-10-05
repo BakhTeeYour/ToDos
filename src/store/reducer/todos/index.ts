@@ -1,12 +1,11 @@
-import {ITodos} from "./interfaces";
+import {ICurrProject, ITodos} from "./interfaces";
 import {IAction} from "../interfaces";
 import {ToDos} from "../../action/todos/interfaces";
-import {todos} from "../../../components/consts/initialTodos";
 
 const initialState: ITodos = {
     loading:  false,
     error: null,
-    todos: todos
+    currProject: {} as unknown as ICurrProject
 };
 
 export const ToDosReducer = (state = initialState, action: IAction<any>): ITodos => {
@@ -28,7 +27,13 @@ export const ToDosReducer = (state = initialState, action: IAction<any>): ITodos
                 ...state,
                 loading: false,
                 error: null,
-                todos: action.payload
+                currProject: action.payload
+            }
+        case ToDos.ADD_TODOS:
+            return {
+                ...state,
+                loading: false,
+                error: null,
             }
         default:
             return state;
