@@ -2,11 +2,25 @@ import s from './projectsForm.module.scss'
 import {FC} from "react";
 import {DeleteIcon} from "../icons/deleteIcon";
 import {EditIcon} from "../icons/editIcon";
-import { useNavigate } from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 import {customLocalStorage} from "../../utils/localStorage";
+import {ICurrProject} from "../../store/reducer/todos/interfaces";
 
-export const ProjectsForm: FC<{ data?: any[] }> = ({data}) => {
-    const navigate = useNavigate()
+export const ProjectsForm: FC<
+    {
+        data: ICurrProject[],
+        deleteCurrProject: (currId: string) => void,
+        editCurrProject: (currProject: ICurrProject) => void}> = (
+    {
+        data,
+        deleteCurrProject,
+        editCurrProject
+    }) => {
+    const navigate = useNavigate();
+    const handleClick = (currProject: ICurrProject) => {
+        navigate('/todos')
+        customLocalStorage.set('todo', currProject)
+    }
     return (
         <table className={s.table}>
             <thead>
@@ -19,13 +33,12 @@ export const ProjectsForm: FC<{ data?: any[] }> = ({data}) => {
             <tbody>
             {data?.map(e => (
                 <tr key={e.id}>
-                    <td style={{cursor: 'pointer'}}
-                        onClick={() => {
-                        navigate('/todos')
-                        customLocalStorage.set('todo', e)
-                    }}>{e.projectName}</td>
-                    <td>{e.type}</td>
-                    <td className={s.table_action}><EditIcon/> <DeleteIcon/></td>
+                    <td style={{cursor: 'pointer'}} onClick={() => handleClick(e)}>{e.projectName}</td>
+                    <td>{e.projectType}</td>
+                    <td className={s.table_action}>
+                        <div onClick={() => editCurrProject(e)}><EditIcon/></div>
+                        <div onClick={() => deleteCurrProject(e.id)}><DeleteIcon/></div>
+                    </td>
                 </tr>
             ))}
             </tbody>

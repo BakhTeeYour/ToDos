@@ -1,6 +1,7 @@
 export interface ICurrProject {
-    id: number;
+    id: string;
     projectName: string;
+    projectType: string;
     todos: [{
         id: number;
         name: string;

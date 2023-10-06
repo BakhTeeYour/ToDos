@@ -1,5 +1,8 @@
+import {ICurrProject} from "../todos/interfaces";
+
 export interface IProjects {
     loading: boolean;
     error: null | string;
-    projects: any[];
+    projects: ICurrProject[];
+    editProject: ICurrProject | null;
 }

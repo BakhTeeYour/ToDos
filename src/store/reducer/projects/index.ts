@@ -1,11 +1,13 @@
 import {IProjects} from "./interfaces";
 import {IAction} from "../interfaces";
 import {Projects} from "../../action/projects/interfaces";
+import {ICurrProject} from "../todos/interfaces";
 
 const initialState: IProjects = {
     loading: false,
     error: null,
-    projects: []
+    projects: [],
+    editProject: null
 };
 
 export const projectsReducer = (state = initialState, action: IAction<any>) => {
@@ -27,6 +29,13 @@ export const projectsReducer = (state = initialState, action: IAction<any>) => {
                 loading: false,
                 error: null,
                 projects: action.payload
+            }
+        case Projects.EDIT_PROJECTS:
+            return {
+                ...state,
+                loading: false,
+                error: null,
+                editProject: action.payload
             }
         default:
             return state
