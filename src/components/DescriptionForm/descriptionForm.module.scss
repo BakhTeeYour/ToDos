@@ -1,0 +1,22 @@
+.description_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.description {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.description_add_title {
+  margin-left: 30px;
+}
+
+.description_title {
+  font-size: 16px;
+  line-height: 20px;
+  color: #3688EA;
+  font-weight: 600;
+}

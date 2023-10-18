@@ -1,12 +1,3 @@
-@mixin button-style {
-  background: #3688EA;
-  padding: 10px 30px;
-  border-radius: 6px;
-  border: none;
-  color: #fff;
-  font-size: 16px;
-  cursor: pointer;
-}
 .projects_wrapper {
   margin: 20px;
 }
@@ -19,32 +10,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-  button {
-    @include button-style
-  }
 }
 
 .projects_search {
-  position: relative;
-
-  div {
-    position: absolute;
-    top: 2px;
-    left: 5px;
-  }
-
-  input {
-    border-radius: 6px;
-    padding: 10px 30px;
-    border: 1px solid #9CABC2;
-
-    &:focus {
-      outline: none;
-      appearance: none;
-      border: 1px solid #3688EA;
-    }
-  }
+  width: 300px;
 }
 
 .project_add_wrapper {
@@ -57,25 +26,11 @@
     flex-direction: column;
     gap: 10px;
     margin-bottom: 10px;
-
-    input {
-      border-radius: 8px;
-      border: 1px solid #9CABC2;
-      padding: 10px 30px;
-      &:focus {
-        outline: none;
-        appearance: none;
-        border: 1px solid #3688EA;
-      }
-    }
   }
 
   .project_add_button {
     display: flex;
-    justify-content: end;
+    justify-content: center;
     gap: 10px;
-    button {
-      @include button-style
-    }
   }
 }

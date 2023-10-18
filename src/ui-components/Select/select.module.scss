@@ -1,0 +1,128 @@
+.select_items_wrapper {
+  padding: 15px 36px;
+  font-size: 14px;
+  line-height: 20px;
+  position: relative;
+  cursor: pointer;
+  &:hover {
+    font-weight: 500;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+  }
+}
+
+.select_curr_item {
+  background: rgba(54, 136, 234, 1);
+  color: white;
+  font-weight: 500;
+  &:hover {
+    background: rgba(49, 122, 211, 1);
+  }
+}
+
+.select_items {
+  color: black;
+  font-weight: 500;
+
+  &:hover {
+    background: rgba(243, 244, 248, 1);
+  }
+
+}
+
+.select_curr_value {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 100%;
+  background: white;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 16px;
+}
+
+.select_wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  user-select: none;
+  position: relative;
+}
+
+.select_title {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 600;
+  color: #3688EA;
+}
+
+.select_active {
+  border: 1px solid #3688EA;
+}
+
+.select_disActive {
+  border: 1px solid rgba(243, 244, 248, 1);
+}
+
+.select_value {
+  background: #3688EA;
+}
+
+.select_NotValue {
+  background: rgba(243, 244, 248, 1);
+}
+
+.select_current {
+  height: 42px;
+  padding-left: 20px;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  padding-right: 18px;
+  cursor: pointer;
+  border-radius: 7px;
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid inherit;
+  &:hover {
+    border: 1px solid #3688EA;
+  }
+}
+
+.select_span_value {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  color: white;
+}
+
+.select_placeholder {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: rgba(152, 152, 169, 1);
+}
+
+.select_chevron {
+  rotate: 180deg;
+  ransition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+}
+
+.select_list_wrapper {
+  //padding: 20px 0 20px 0;
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  position: absolute;
+  top:  calc(100% + 10px);
+  border-radius: 7px;
+  z-index: 50;
+  width: 100%;
+  background: white;
+}

@@ -1,0 +1,71 @@
+.input_block {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.default {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+  color: rgba(152, 152, 169, 1);
+  margin-bottom: 8px;
+}
+
+.primary {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+  color: #3688EA;
+  margin-bottom: 8px;
+}
+
+.input_wrapper {
+  display: flex;
+  align-items: center;
+  background: rgba(243, 244, 248, 1);
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+  border-radius: 7px;
+  border: 1px;
+}
+
+.input_active {
+  border: 1px solid #3688EA;
+}
+
+.input_disActive {
+  border: 1px solid rgba(243, 244, 248, 1);
+}
+
+.input_error {
+  border: 1px solid rgba(231, 78, 68, 1);
+  background: #FBDAD8;
+}
+
+.input_error_text {
+  font-size: 14px;
+  line-height: 20px;
+  color: rgb(239 68 68);
+  margin-top: 4px;
+  font-weight: 500;
+}
+
+.input_el {
+  width: 100%;
+  background: rgba(243, 244, 248, 1);
+  outline: none;
+  padding: 8px 20px;
+  font-size: 14px;
+  line-height: 20px;
+  border-radius: 7px;
+  border: 1px solid rgba(243, 244, 248, 1);
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.input_wrapper svg {
+  margin-right: 10px;
+}

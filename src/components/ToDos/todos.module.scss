@@ -2,6 +2,7 @@
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+  overflow: auto;
 }
 
 .todos_board_block {
@@ -29,7 +30,9 @@
   min-width: 272px;
   padding: 0 10px 10px 10px;
   background: #F3F4F8;
+  cursor: pointer;
 }
+
 .todos_task_block_add {
   font-size: 18px;
   cursor: pointer;
@@ -46,31 +49,10 @@
   p {
     cursor: pointer;
   }
-  input {
-    background: #F3F4F8;
-    border-radius: 8px;
-    max-width: 100%;
-    border: none;
-    outline: none;
-    padding: 15px;
-    margin-bottom: 5px;
-    font-size: 15px;
-    &:focus {
-      outline: 1px solid #3688EA;
-    }
-  }
 }
 
 .todos_task_add_btn {
   padding: 5px;
   display: flex;
   gap: 10px;
-  button {
-    border: 1px solid #3688EA;
-    background: inherit;
-    padding: 6px 30px;
-    border-radius: 8px;
-    font-size: 15px;
-    cursor: pointer;
-  }
 }

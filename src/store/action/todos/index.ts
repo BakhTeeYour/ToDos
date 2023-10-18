@@ -24,12 +24,6 @@ const getTodosSuccess = (data: ICurrProject) => {
     };
 };
 
-const addTodosSuccess = (data: any[]) => {
-    return {
-        type: ToDos.ADD_TODOS,
-        payload: data,
-    };
-};
 
 export const getTodos = () => async (dispatch: Dispatch<any>) => {
     try {
@@ -40,10 +34,11 @@ export const getTodos = () => async (dispatch: Dispatch<any>) => {
     }
 }
 
-export const addTodos = (todo: any) => async (dispatch: Dispatch<any>) => {
+export const addTodos = (todo: ICurrProject) => async (dispatch: Dispatch<any>) => {
     try {
         dispatch(getTodosReq());
-        dispatch(addTodosSuccess(todo));
+        customLocalStorage.set('todo', todo)
+        dispatch(getTodosSuccess(todo));
     } catch (e) {
         dispatch(getTodosFail());
     }

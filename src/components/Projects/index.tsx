@@ -8,6 +8,8 @@ import {useEffect, useState} from "react";
 import {addProjects, deleteProject, editCurrProject, getProjects} from "../../store/action/projects";
 import {If} from "../../ui-components/If";
 import {Modal} from "../../ui-components/Modal";
+import {Button} from "../../ui-components/Button";
+import {Input} from "../../ui-components/Input";
 
 export const Projects = () => {
     const {loading, projects, error, editProject} = useSelector((state: IRootReducer) => state.projectsReducer);
@@ -49,12 +51,11 @@ export const Projects = () => {
                 <div className={s.projects_header_block}>
                     <div className={s.projects_title_block}>
                         <h1>Проекты</h1>
-                        <button onClick={() => setModal(true)}>Create</button>
+                        <Button onClick={() => setModal(true)} variant="primary" size="base">Create</Button>
                     </div>
                     <label className={s.projects_search}>
-                        <div><SearchIcon/></div>
-                        <input onChange={() => {
-                        }} type="text" placeholder='Search'/>
+                        <Input value={''} onChange={() => {
+                        }} type="text" placeholder='Search' withSearchIcon={true}/>
                     </label>
                 </div>
                 <ProjectsForm
@@ -71,20 +72,19 @@ export const Projects = () => {
                 <Modal onBackdropClick={() => setModal(false)}>
                     <div className={s.project_add_wrapper}>
                         <h3>Добавление проекта</h3>
-                        <label className={s.project_add_input}>
-                            <input type="text" value={projectName} onChange={(e) => setProjectName(e.target.value)}
+                        <div className={s.project_add_input}>
+                            <Input value={projectName} onChange={(e) => setProjectName(e.target.value)} type="text"
                                    placeholder="Название проекта"/>
-                            <input type="text" value={projectType} onChange={(e) => setProjectType(e.target.value)}
+                            <Input value={projectType} onChange={(e) => setProjectType(e.target.value)} type="text"
                                    placeholder="Тип проекта"/>
-                        </label>
+                        </div>
                         <div className={s.project_add_button}>
-                            <button onClick={handleAddProject}>Добавить</button>
-                            <button onClick={() => {
+                            <Button onClick={handleAddProject} size="base" variant="primary">Add</Button>
+                            <Button onClick={() => {
                                 setProjectType('');
                                 setProjectName('');
                                 setModal(false);
-                            }}>Отменить
-                            </button>
+                            }} size="base" variant="dark_outlined">X</Button>
                         </div>
                     </div>
                 </Modal>

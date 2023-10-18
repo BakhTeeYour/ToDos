@@ -14,8 +14,8 @@ export const Modal: FC<IProps> = ({children, onBackdropClick}) => {
         };
     }, []);
     return (
-        <div className={s.modal_wrapper}>
-             {/*// onClick={onBackdropClick}>*/}
+        <div className={s.modal_wrapper}
+             onClick={onBackdropClick}>
             <div className={s.wrapper_fade_in}>
                 {children}
             </div>

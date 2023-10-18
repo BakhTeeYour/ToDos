@@ -1,0 +1,33 @@
+.addCardForm_wrapper {
+  min-width: 768px;
+  height: 800px;
+  background: white;
+  border-radius: 8px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow: auto;
+}
+
+
+.datePicker {
+  display: flex;
+  gap: 10px;
+}
+
+
+.select_block {
+  display: flex;
+  gap: 10px;
+}
+
+.attachments_block {
+  display: flex;
+  align-items: center;
+
+}
+
+.comments_block {
+
+}
